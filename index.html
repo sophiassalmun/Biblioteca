@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+
+    <!-- Zona de chat: acá aparecen las burbujas del usuario y del agente -->
+    <section id="zona-de-chat" aria-live="polite" aria-label="Zona de chat"></section>
+
+    <!-- Zona de escritura: campo de texto, contador y botón de envío -->
+    <form id="zona-de-escritura" autocomplete="off">
+      <textarea
+        id="campo-mensaje"
+        rows="1"
+        maxlength="500"
+        placeholder="Contame qué te gusta leer o qué tropos buscás..."
+        aria-label="Escribí tu mensaje"></textarea>
+      <div class="barra-envio">
+        <span id="contador" class="contador">0/500</span>
+        <button type="submit" id="boton-enviar">Enviar</button>
+      </div>
+    </form>
+
+  </main>
+
+  <!-- config.js se carga ANTES que script.js -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
